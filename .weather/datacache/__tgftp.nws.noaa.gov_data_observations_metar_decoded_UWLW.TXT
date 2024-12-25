@@ -1,0 +1,12 @@
+Ulyanovsk, Russia (UWLW) 54-21N 048-23E
+Dec 14, 2024 - 12:00 AM EST / 2024.12.14 0500 UTC
+Wind: from the WNW (300 degrees) at 16 MPH (14 KT) gusting to 27 MPH (23 KT):0
+Visibility: greater than 7 mile(s):0
+Sky conditions: overcast
+Temperature: 15 F (-9 C)
+Windchill: 0 F (-18 C):1
+Dew Point: 8 F (-13 C)
+Relative Humidity: 72%
+Pressure (altimeter): 29.62 in. Hg (1003 hPa)
+ob: UWLW 140500Z 30007G12MPS 9999 OVC022 M09/M13 Q1003 R20/850546 NOSIG RMK QFE747/0997
+cycle: 5

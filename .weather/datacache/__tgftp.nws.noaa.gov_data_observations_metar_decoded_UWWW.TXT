@@ -1,0 +1,13 @@
+Samara, Russia (UWWW) 53-12N 050-09E
+Nov 23, 2024 - 04:00 AM EST / 2024.11.23 0900 UTC
+Wind: from the SSE (150 degrees) at 11 MPH (10 KT):0
+Visibility: 2 mile(s):0
+Sky conditions: overcast
+Weather: light drizzle; mist
+Temperature: 35 F (2 C)
+Windchill: 26 F (-3 C):1
+Dew Point: 35 F (2 C)
+Relative Humidity: 100%
+Pressure (altimeter): 30.33 in. Hg (1027 hPa)
+ob: UWWW 230900Z 15005MPS 3300 -DZ BR OVC003 02/02 Q1027 R15/290050 NOSIG RMK QFE759/1012
+cycle: 9

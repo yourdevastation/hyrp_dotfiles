@@ -1,0 +1,34 @@
+Пример создания подсказки:
+Toast.makeText(this, "Пример текста", Toast.LENGTH_LONG).show();
+
+Пример создания простого всплывающего окна представлен ниже:
+AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+builder.setTitle("Большая подсказка").setMessage(text));
+AlertDialog dialog = builder.create();
+dialog.show();
+
+Пример из кода ITproger:
+ private void showInfoAlert(String text) {
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+        builder1.setTitle("Подсказка")
+                .setMessage(text)
+                .setCancelable(false)
+                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+Создание страницы:
+
+public void start2ndActivity(View v) {
+        Intent intent = new Intent(this, activity_2.class);
+        startActivity(intent);
+    }

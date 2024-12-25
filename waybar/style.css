@@ -1,0 +1,155 @@
+/*__        __          _                  ____  _         _      
+  \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___ 
+   \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \
+    \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/
+     \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___|
+                |___/                              |___/   
+*/
+
+/*----------------------------------------
+	GENERAl
+----------------------------------------*/
+
+@import "./colors-waybar.css";
+
+window#waybar {
+	background: transparent;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+/* .modules-left, .modules-center, .modules-right { */
+/* 	background: @color5; */
+/*  	border: 0px solid @color3; */
+/* 	padding-top: 0px; */
+/* 	padding-bottom: 0px; */
+/* 	padding-right: 4px; */
+/* 	padding-left: 4px; */
+/* 	border-radius: 24px; */
+
+/* } */
+
+* {
+	font-family: "CPMono_v07 Light";
+	font-weight: bold;
+	font-size: 100%;
+	 }
+
+/*----------------------------------------
+	WORKSPACES
+----------------------------------------*/
+
+#workspaces {
+	background: @color5;
+	margin: 0px 0px 0px 0px;
+	padding: 4px 4px;
+	font-weight: normal;
+	font-style: normal;
+	border-radius: 24px;
+	opacity:0.8;
+}
+
+#workspaces button {
+	font-size: 12px;
+	padding: 0px 8px;
+	margin: 0px 4px;
+	border-radius: 80px;
+	min-width: 16px;
+	color: @color1;
+	background-color: @color1;
+	opacity: 0.4;
+	transition: all 0.3s ease-in-out;
+} 
+
+#workspaces button.active {
+	color: @color1;
+	background-color: @color8;
+	border-radius: 16px;
+	min-width: 64px;
+	/*background-size: 400% 100%;*/
+	opacity: 1.0;
+	transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+	background-color: @color1;	
+	color: @color9;
+	opacity: 0.7;
+}
+
+#custom-power {
+	font-size: 16px;
+	padding-right: 16px;
+	padding-left: 8px;
+}
+
+#battery {
+	padding-left: 16px;
+	padding-right: 16px;
+	font-size: 16px;
+}
+
+#network {
+	padding-left: 8px;                                                  
+    padding-right: 16px;                                                
+    font-size: 16px;  	
+}
+
+#bluetooth {
+	padding-left: 8px;                                                  
+    padding-right: 8px;                                                 
+    font-size: 16px;  	
+}
+
+#wireplumber {
+	padding-left: 16px;                                                  
+    padding-right: 16px;                                                
+    font-size: 16px;  	
+}
+#clock {
+	padding-left: 8px;                                                  
+    padding-right: 32px;
+    font-size: 16px; 
+}
+
+#temperature {
+	padding-left: 16px;                                                 
+    padding-right: 8px;                                                 
+    font-size: 16px;  	
+}
+
+#cpu {
+	padding-left: 16px;  
+    padding-right: 8px;                                                
+    font-size: 16px;  	
+}
+
+#memory {
+	padding-top: 4px;
+	padding-left: 16px; 
+    padding-right: 8px;                                                
+    font-size: 16px;  	
+}
+
+#disk {
+	padding-top: 2px;
+	padding-left: 16px; 
+    padding-right: 8px;                                                
+    font-size: 16px;  	
+}
+
+#taskbar {
+	padding-top: 2px;
+	padding-left: 16px; 
+    padding-right: 8px;                                                
+    font-size: 16px;  	
+}
+/* #cava { */
+/* 	padding-left: 8px; */                                                          
+/* 	color: @color4; */
+/*     padding-right: 16px; */                                                         
+/*     font-size: 16px; */  	
+/* } */
+
+
+

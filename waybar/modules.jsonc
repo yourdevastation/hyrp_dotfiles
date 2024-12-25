@@ -1,0 +1,221 @@
+//  __  __           _       _           
+// |  \/  | ___   __| |_   _| | ___  ___ 
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// | |  | | (_) | (_| | |_| | |  __/\__ \
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+// ---------------------------------------
+
+{
+
+	"custom/power": {
+        "format" : "",
+		"tooltip": false,
+		"on-click": "wlogout" ,
+		"interval": 0 // Статический текст, без обновления
+		},
+  
+
+	"battery": {
+		"full-at": 96,
+		"interval": 1,
+		"rotate": 0,
+		"design-capacity": false,
+		"states": {
+			"warning": 30,
+			"critical": 15
+			},
+		"format": "{icon}",
+		"format-icons": ["","","","",""],
+		"format-charging": "",
+		"format-discharging": "󰚦",
+		"tooltip": true,
+		"format-time": "{H}h {M}min",
+		"tooltip-format": "{capacity}% {timeTo} {power}w",
+		"max-length": 24
+	},
+
+	"network": {
+		"interval": 5,
+		"format": "{ifname}",
+		"format-wifi": "{icon}",
+		"format-ethernet": "",
+		"format-disconnected": "󰌙",
+		"tooltip": true,
+		"tooltip-format": "{ipaddr}",
+		"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "󰌙 Disconnected",
+		"max-length": 50,
+		"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+		"on-click": "iwgtk"
+
+	},
+
+	"bluetooth": {
+		"format-on": "",
+		"format-off": "󰂲",
+		"format-enabled": "󰂲",
+		"format-disabled": "󰂲",
+		"format-connected": "󰂱 {num_connections}",
+		"tooltip-format-on": "{status}",
+		"tooltip-format-off": "{status}",
+		"tooltip-format-enabled": "{status}",
+		"tooltip-format-disabled": "{status}",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+		"tooltip": true,
+		"on-click": "blueman-manager",
+		"on-scroll-up": "rfkill unblock bluetooth",
+		"on-scroll-down": "rfkill block bluetooth"
+	},
+
+	"wireplumber": {
+		"max-volume": 100,
+		"max-length": 24,
+		"format": "{icon}",
+		"format-muted": "󰖁",
+		"format-icons": ["", "", ""],
+		"on-click": "pwvucontrol",
+		"on-scroll-up": "~/dotfiles/scripts/set_volume.sh",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+		"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"tooltip": true,
+		"tooltip-format": "{volume}%"
+	},
+
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{temperatureC}°C {icon}",
+		"format-critical": "{temperatureC}°C 󰈸",
+		"format-icons": ["", "", ""],
+		"tooltip": true,
+		"tooltip-format": "{temperatureF}°F"
+	},
+
+	"cpu": {
+		"interval": 5,
+		"format": "{usage}% ",
+		"tooltip": true,
+		"on-click": "gnome-system-monitor"
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": "{used:0.1f}G ",
+		"tooltip": true,
+		"tooltip-format": "{used:0.1f}G/{total:0.1f}G",
+		"on-click": "kitty bpytop"
+	},
+
+	"disk": {
+		"interval": 5,
+		"format": "{percentage_free}% ",
+		"path": "/home/roze_petal/",
+		"tooltip": true,
+		"tooltip-format": "Used {used}G of {total}G\nAvailable {free}G"
+	},
+
+	"clock": {
+		"interval": 60,
+		"format": " {:%I:%M %p}",
+		"timezones": [
+			"Europe/Ulyanovsk",
+			"America/New_York",
+			"America/Los_Angeles",
+			"Asia/Tokyo"
+					 ],
+		"actions":  {
+					"on-click-middle": "mode",
+					"on-click": "shift_up",
+                    "on-click-right": "shift_down",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down"
+					},
+		"smooth-scrolling-threshold": 0.1,
+		"tooltip": true,
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    }
+
+		
+	},
+	
+	"hyprland/workspaces#1": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"active-only": false,
+		"all-outputs": true,
+		"show-special": false,
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"persistent-workspaces": {
+			"1": []
+		},
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+
+	"wlr/taskbar": {
+		"all-outputs": false,
+		"format": "{icon}",
+		"icon-size": 16,
+		"tooltip": true,
+		"tooltip-format":"{title}",
+		"ignore-list": [
+			"Alacritty",
+			"kitty"
+		],
+		"on-click": "activate",
+		"on-click-right": "close",
+		"on-click-middle": "fullscreen",
+		"app_ids-mapping": {
+			"firefoxdeveloperedition": "firefox-developer-edition"
+			},
+		"rewrite": {
+			"Firefox Web Browser": "Firefox",
+			"Foot Server": "Terminal"
+		}
+	},
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 8
+	}
+	// "cava": {
+	// 	"cava-config": "/home/roze_petal/.config/cava/config",
+	// 	"framerate": 60,
+	// 	"autosens": 1,
+	// 	"sensitivity": 5,
+	// 	"bars": 12,
+	// 	"lower_cutoff_freq": 20,
+	// 	"higher_cutoff_freq": 20000,
+	// 	"sleep_timer": 5,
+	// 	"hide_on_silence": false,
+	// 	"method": "pipewire",
+	// 	"source": "auto",
+	// 	"sample_rate": 44100,
+	// 	"sample_bits": 16,
+	// 	"stereo": false,
+	// 	"reverse": false,
+	// 	"bar_delimiter": 0,
+	// 	"noise_reduction": 0.50,
+	// 	"input_delay": 0,
+	// 	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+	// }
+
+}

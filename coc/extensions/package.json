@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "coc-python": ">=1.2.13",
+    "coc-css": ">=2.1.0",
+    "coc-java": ">=1.15.2",
+    "coc-html": ">=1.8.0"
+  }
+}

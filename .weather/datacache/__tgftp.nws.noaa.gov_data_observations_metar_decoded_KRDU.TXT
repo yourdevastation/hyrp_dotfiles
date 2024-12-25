@@ -1,0 +1,11 @@
+RALEIGH-DURHAM INTERNATIONAL  AIRPORT, NC, United States (KRDU) 35-54N 078-46W 130M
+Nov 23, 2024 - 02:51 AM EST / 2024.11.23 0751 UTC
+Wind: from the WSW (250 degrees) at 7 MPH (6 KT):0
+Visibility: 10 mile(s):0
+Sky conditions: mostly clear
+Temperature: 43.0 F (6.1 C)
+Dew Point: 30.0 F (-1.1 C)
+Relative Humidity: 59%
+Pressure (altimeter): 29.76 in. Hg (1007 hPa)
+ob: KRDU 230751Z 25006KT 10SM FEW250 06/M01 A2976 RMK AO2 SLP079 T00611011
+cycle: 8

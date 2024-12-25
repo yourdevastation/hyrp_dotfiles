@@ -1,0 +1,48 @@
+Expires:202411232100;;524223
+FPUS52 KRAH 230828
+ZFPRAH
+
+Zone Forecast Product for North Carolina
+National Weather Service Raleigh NC
+327 AM EST Sat Nov 23 2024
+
+This is an automatically generated product that contains an area
+forecast using an average of the gridded forecast data for each
+county. The forecast may not be representative of the exact
+location you are interested in. For a more site specific
+forecast, please visit www.weather.gov/raleigh.
+
+
+NCZ041-232100-
+Wake-
+Including the cities of Raleigh, Cary, Apex, Wake Forest, 
+and Knightdale
+327 AM EST Sat Nov 23 2024
+
+.TODAY...Mostly sunny. Highs around 60. West winds 5 to 10 mph
+with gusts up to 30 mph. 
+.TONIGHT...Clear. Patchy frost after midnight. Lows in the mid
+30s. West winds around 5 mph in the evening, becoming light and
+variable. 
+.SUNDAY...Areas of frost in the morning. Sunny. Highs in the mid
+60s. Southwest winds 5 to 10 mph. 
+.SUNDAY NIGHT...Clear. Lows in the upper 30s. Southwest winds
+around 5 mph. 
+.MONDAY...Mostly sunny. Highs in the upper 60s. Southwest winds
+around 5 mph. 
+.MONDAY NIGHT AND TUESDAY...Partly cloudy. A chance of sprinkles.
+Lows in the lower 50s. Highs in the upper 60s. 
+.TUESDAY NIGHT AND WEDNESDAY...Mostly clear. Lows in the mid 30s.
+Highs in the upper 50s. 
+.WEDNESDAY NIGHT...Partly cloudy in the evening, then becoming
+mostly cloudy. Lows in the lower 40s. 
+.THANKSGIVING DAY...Mostly cloudy with a 50 percent chance of
+showers. Highs in the upper 50s. 
+.THURSDAY NIGHT...Showers likely. Lows in the lower 40s. Chance
+of rain 60 percent. 
+.FRIDAY...Partly sunny. A chance of showers in the morning. Highs
+in the lower 50s. Chance of rain 40 percent. 
+
+$$
+
+

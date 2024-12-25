@@ -1,0 +1,17 @@
+mode=drun
+width=40%
+lines = 6
+prompt=Search...
+hide_scroll = true
+normal_window = false
+location=center
+gtk-dark=true
+allow_images=true
+image_size=32
+insensitive = true
+matching = contains
+allow_markup=true
+no_actions=true
+orientation=vertical
+halign=fill
+content_halign=fill
