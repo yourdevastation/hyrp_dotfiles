@@ -1,27 +1,46 @@
+/*          _                         _
+  __      _| | ___   __ _  ___  _   _| |_
+  \ \ /\ / / |/ _ \ / _` |/ _ \| | | | __|
+   \ V  V /| | (_) | (_| | (_) | |_| | |_
+    \_/\_/ |_|\___/ \__, |\___/ \__,_|\__|
+                    |___/   
+*/
+@import "../waybar/colors-waybar.css";
+
 * {
+	font-family: "Zen Dots";	
+	font-size: 20px;
 	background-image: none;
-	box-shadow: none;
+	transition: 20ms;
 }
 
 window {
-	background-color: rgba(12, 12, 12, 0.9);
+	background-color: rgba(12, 12, 12, 0.1);
+	background-image: image(url("../hypr/wallpaper_effects/current_wallpaper_blur"));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 button {
-    border-radius: 0;
-    border-color: black;
-	text-decoration-color: #FFFFFF;
-    color: #FFFFFF;
-	background-color: #1E1E1E;
+	color: @color8;
+	background-color: rgba(12, 12, 12, 0.3);
+
+    border-radius: 16px;
 	border-style: solid;
-	border-width: 1px;
+    border-color: @color8;
+	border-width: 2px;
+	margin: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 24px 0 rgba(0, 0, 0, 0.2);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
 }
 
 button:focus, button:active, button:hover {
-	background-color: #3700B3;
+	color: @color1;
+	border-color: @color1;
+	background-color: rgba(12, 12, 12, 0.7);
 	outline-style: none;
 }
 

@@ -81,10 +81,23 @@ plugins=(git zsh-syntax-highlighting fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+eval "$(zoxide init zsh)"
+
+eval "$(fzf --zsh)"
+export FZF_DEFAULT_COMMAND='fd --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type=d --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS='--height 50% --layout=default --border --color=hl:#2dd4bf'
+export FZF_CTRL_T_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}"'
+export FZF_ALT_C_OPTS='--preview "eza --tree --icons=always --color=always {} | head -200"'
 # User configuration
 export XDG_IM_MODULE=wayland
 export EDITOR="vim"
 export VISUAL="vim"
+export HYPRSHOT_DIR="$HOME/Pictures/Screenshots:$HYPRSHOT_DIR"
+export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
+export GTK_MODULES=gail:atk-bridge
+
 if uwsm check may-start && uwsm select; then
 	exec systemd-cat -t uwsm_start uwsm start default
 fi
@@ -110,13 +123,12 @@ export LANG=en_US.UTF-8
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # Aliases
-alias v='command vim'
+alias v="vim"
 alias ai="yay -S"
 alias dpi="systemctl start byedpi"
 alias ez="eza --tree --level=1 --icons=always"
 alias pi="sudo pacman -S"
 alias u="sudo pacman -Syu"
-export HYPRSHOT_DIR="$HOME/Pictures/Screenshots:$HYPRSHOT_DIR"
-export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
-export GTK_MODULES=gail:atk-bridge
+alias conf="vim /home/roze_petal/.config/hypr/hyprland.conf"
+alias fman="compgen -c | fzf | xargs man"
 

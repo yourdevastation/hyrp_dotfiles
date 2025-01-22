@@ -40,22 +40,29 @@ newwall=$(echo $wallpaper | sed "s|&HOME/gitrepos/wallpaper/||g")
 # Set tne new wallpaper
 #===========================================
 
-swww img $wallpaper --transition-step 30 --transition-type grow --transition-fps=60
+swww img $wallpaper --transition-step 30 --transition-type simple --transition-fps=60
 #~/.config/waybar/reload.sh
-#===========================================
-# Get wallpaper path
-#===========================================
-wallpaper_path=$(cat "$HOME/.cache/swww/eDP-1")
-
-#===========================================
-# Copy current wallpaper for hyprlock
-#===========================================
-cp "$wallpaper_path" "$HOME/.config/hypr/wallpaper_effects/current_wallpaper"
 
 #===========================================
 # Restart Waybar
 #===========================================
 ~/dotfiles/scripts/restartwaybar.sh
+
+#===========================================
+# Get wallpaper path
+#===========================================
+wallpaper_path=$(cat "$HOME/.cache/swww/eDP-1")
+output_path="$HOME/.config/hypr/wallpaper_effects"
+
+#===========================================
+# Copy current wallpaper for hyprlock
+#===========================================
+cp "$wallpaper_path" "$output_path/current_wallpaper"
+
+#===========================================
+# Make blurred wallpaper
+#===========================================
+convert "$wallpaper_path" -blur 0x10 "$output_path/current_wallpaper_blur"
 
 #===========================================
 # Send notification

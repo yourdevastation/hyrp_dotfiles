@@ -184,14 +184,14 @@ method = ncurses
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
-gradient_color_1 = '#6E716F'
-gradient_color_2 = '#8B6F67'
-gradient_color_3 = '#82837C'
-gradient_color_4 = '#768985'
-gradient_color_5 = '#A4A09C'
-gradient_color_6 = '#C8BAB5'
-gradient_color_7 = '#c1c3c2'
-gradient_color_8 = '#576a60'
+gradient_color_1 = '#628C95'
+gradient_color_2 = '#9D909D'
+gradient_color_3 = '#9CA4AE'
+gradient_color_4 = '#A8ADB5'
+gradient_color_5 = '#D3A1A2'
+gradient_color_6 = '#BBBCC4'
+gradient_color_7 = '#c4c2c4'
+gradient_color_8 = '#6e596e'
 
 
 

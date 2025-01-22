@@ -1,14 +1,153 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Main Config 1080p */
+/* Dark theme. */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 
-@import "~/.config/rofi/master-config.rasi" 
-
-/* ---- Configuration ---- */
 configuration {
-	font: "JetBrains Mono 10";
+    modes: "drun,filebrowser,window,ssh,keys";
+    font: "Poppins Light 12";
+	sidebar-mode: true;
+    show-icons: true;
+	drun-display-format: "{name}";
+	terminal: "kitty";
+	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
+	display-drun:"󰣇";
+	display-filebrowser:"";
+	display-window:"";
+	display-ssh:"";
+	display-keys:"";
+}
+
+window {
+	fullscreen: false;
+    width: 40%;
+	height: 50%;
+    location: center;
+	background-color: transparent;
+    border: none; 
+	border-radius: 8px;
+	border-color: @color1;
+    padding: 8px;
+}
+
+
+mainbox {
+	children: [ mode-switcher, inputbar, message, listview ];
+	spacing: 16px;
+	background-color: transparent;
+	border: none;
+	border-radius: inherit;
+	orientation: horizontal;
+}
+
+mode-switcher {
+	children: [ drun, filebrowser, window, ssh, keys ];
+	spacing: 16px;
+	padding: 32px 8px;
+	background-color: transparent;
+	orientation: vertical;
+}
+
+button {
+	width: 80px;
+	height: 80px;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	border-radius: 100px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+button.selected {
+    background-color: @color1;
+    text-color: @selected-normal-foreground;
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+	border: none;
+	border-radius: 16px;
+	padding: 24px 12px; 
+    cycle: true;
+    scrollbar: false;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+element {
+    border: 0px;
+	border-radius: 16px;
+	orientation: horizontal;
+	children: [ element-icon, element-text ];
+	spacing: 16px;
+    padding: 8px 8px;
+}
+
+element.normal.normal {
+    background-color: transparent;
+    text-color: @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: transparent;
+    text-color: @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: transparent;
+    text-color: @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: transparent;
+    text-color: @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: transparent;
+    text-color: @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: transparent;
+    text-color: @alternate-active-foreground;
+}
+
+element-icon {
+    size: 48px;
 }
 
 element-text {
-    font:	"JetBrains Mono 12";
+	vertical-align: 0.5;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element-text selected.normal {
+	text-color: @background-color;
+}
+
+entry {
+	text-color: @normal-foreground;
+    placeholder: "Search...";
+}
+
+inputbar {
+    enabled: false;
 }
 

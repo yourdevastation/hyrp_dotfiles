@@ -1,9 +1,24 @@
 [window]
+#position = { x = 0, y = 0 }
+padding = { x = 8, y = 4 }
+dynamic_padding = true
 opacity = 0.8
+decorations  = "None"
+blur = true
 
-[window.padding]
-x = 10
-y = 10
+[selection]
+#semantic_escape_chars = ",│‘|:"' ()[]{}<>t"
+save_to_clipboard = true
+
+[cursor.style]
+shape = "Block"
+blinking = "Always"
+[cursor] 
+blink_timeout = 0
+blink_interval = 500
+unfocused_hollow = false
+# thickness = 0.15
+
 
 [general]
 live_config_reload = true

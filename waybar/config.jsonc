@@ -10,12 +10,12 @@
     	
 	//POSITION TOP
 	"layer": "top",
-	"margin-top": 8,
+	"margin-top": 0,
 	"margin-bottom": 0,
 
 	"height": 34,
-	"margin-left": 8,
-	"margin-right": 8,
+	"margin-left": 0,
+	"margin-right": 0,
 	"spacing": 0,
 
 	//POSITION BOTTOM
@@ -29,25 +29,39 @@
 
     //Modules LEFT
     "modules-left": [
-	"temperature",
-	"cpu",
-	"memory",
-	"disk",
-	"wlr/taskbar"
+    "hyprland/workspaces#1",
+	"group/hardware"
     ],
 
     //Modules CENTER
     "modules-center": [
-        "hyprland/workspaces#1"
+		"clock"
     ],
 
     //Modules RIGHT
     "modules-right": [
-		"clock",
+	"wlr/taskbar",
 		"wireplumber",
 		"bluetooth",
 		"network",
+		"hyprland/language",
+		"custom/notification",
         "battery",
         "custom/power"
-    ]
+    ],
+
+	"group/hardware": {
+		"orientation": "horizontal",
+		"drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": false
+		},
+		"modules": [
+			"temperature",
+			"cpu",
+			"memory",
+			"disk"
+		]
+	}
 }

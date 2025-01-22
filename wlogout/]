@@ -12,29 +12,10 @@
 
 @import "./colors-waybar.css";
 
-* {
-	font-family:'Zen Dots', 'Font Awesome 6 Free', 'FontAwesome', 'Noto Sans', monospace;
-	font-weight: normal;
-	font-size: 13px;
-	color: white;
-}
-
-
 window#waybar {
 	background: transparent;
 	transition-property: background-color;
 	transition-duration: 0.5s;
-}
-
-.modules-right {
-	background: rgba(0, 0, 0, 0.2);
-	margin: 4px 8px 4px 0px;
-	border-radius: 24px;
-}
-
-.modules-left {
-	margin: 4px 0px 4px 8px;
-	background: transparent;
 }
 
 /* .modules-left, .modules-center, .modules-right { */
@@ -48,13 +29,19 @@ window#waybar {
 
 /* } */
 
+* {
+	font-family: "CPMono_v07 Light";
+	font-weight: bold;
+	font-size: 100%;
+	 }
+
 /*----------------------------------------
 	WORKSPACES
 ----------------------------------------*/
 
 #workspaces {
-	background: rgba(0, 0, 0, 0.5);
-	margin: 0px 8px 0px 0px;
+	background: @color5;
+	margin: 0px 0px 0px 0px;
 	padding: 4px 4px;
 	font-weight: normal;
 	font-style: normal;
@@ -63,10 +50,11 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0px 16px;
-	margin: 0px 3px;
+	font-size: 12px;
+	padding: 0px 8px;
+	margin: 0px 4px;
 	border-radius: 80px;
-	min-width: 2px;
+	min-width: 16px;
 	color: @color1;
 	background-color: @color1;
 	opacity: 0.4;
@@ -77,7 +65,7 @@ window#waybar {
 	color: @color1;
 	background-color: @color1;
 	border-radius: 16px;
-	min-width: 32px;
+	min-width: 64px;
 	/*background-size: 400% 100%;*/
 	opacity: 1.0;
 	transition: all 0.3s ease-in-out;
@@ -95,114 +83,89 @@ window#waybar {
 
 tooltip {
 	border-radius: 16px;
-	background: rgba(0, 0, 0, 0.8);
+	background-color: @color5;
 	opacity: 0.9;
 }
 
 tooltip label {
 	color: white;
-	font-family:'Poppins', 'Font Awesome 6 Free', 'FontAwesome', 'Noto Sans', monospace;
 }
 
 /*----------------------------------------
 	WINDOW
 ----------------------------------------*/
 
-/* #window { */
-
-/* } */
-
-/*----------------------------------------
-	TASKBAR
-----------------------------------------*/
-
-#taskbar {
-	background: transparent;
-	margin: 0px 4px 0px 0px;
-	padding: 0px 4px;
-	border-radius: 24px;
-	font-weight: normal;
-	font-style: normal;
-}
-
-#taskbar button {
-	background-color: transparent;
-	margin: 0px;
-	border: none;
-	border-radius: 24px;
-}
-
-#taskbar button.active {
-	background-color: @color5;
-	border-radius: 24px;
+#window {
+	background: @color1;
 }
 
 #custom-power {
-	margin: 0px 16px 0px 0px;
+	font-size: 16px;
+	padding-right: 16px;
+	padding-left: 8px;
 }
 
 #battery {
-	background: transparent;
-	margin: 0px 16px 0px 0px;
-}
-
-#custom-notification {
-	background: transparent;
-	margin: 0px 16px 0px 0px;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-size: 16px;
 }
 
 #network {
-	margin: 0px 24px 0px 0px;
+	padding-left: 8px;                                                  
+    padding-right: 16px;                                                
+    font-size: 16px;  	
 }
 
 #bluetooth {
-	margin: 0px 16px 0px 0px;
+	padding-left: 8px;                                                  
+    padding-right: 8px;                                                 
+    font-size: 16px;  	
 }
 
 #wireplumber {
-	padding-left: 4px;
-	margin: 0px 16px 0px 0px;
-}
-#language {
-	margin: 0px 16px 2px 0px;
+	padding-left: 16px;                                                  
+    padding-right: 16px;                                                
+    font-size: 16px;  	
 }
 #clock {
-	font-size: 14px;
-	font-family:'CPMono_v07 Plain', 'Font Awesome 6 Free', 'FontAwesome', 'Noto Sans', monospace;
-	margin: 0px 32px 0px 16px;
+	padding-left: 8px;                                                  
+    padding-right: 32px;
+    font-size: 16px; 
 }
 
 #temperature {
-	font-size: 12px;
-	margin: 0px 0px 0px 16px;
+	padding-left: 16px;                                                 
+    padding-right: 8px;                                                 
+    font-size: 16px;  	
 }
 
 #cpu {
-	font-size: 12px;
 	padding-left: 16px;  
     padding-right: 8px;                                                
+    font-size: 16px;  	
 }
 
 #memory {
-	font-size: 12px;
-	padding-top: 0px;
+	padding-top: 4px;
 	padding-left: 16px; 
     padding-right: 8px;                                                
+    font-size: 16px;  	
 }
 
 #disk {
-	font-size: 12px;
-	padding-top: 0px;
+	padding-top: 2px;
 	padding-left: 16px; 
     padding-right: 8px;                                                
+    font-size: 16px;  	
 }
 
-#hardware {
-	background: rgba(0, 0, 0, 0.2);
-	padding: 0px 16px 0px 0px;
-	border-radius: 24px;
+#taskbar {
+	padding-top: 2px;
+	padding-left: 16px; 
+    padding-right: 8px;                                                
+    font-size: 16px;  	
 }
-
 /* #cava { */
 /* 	padding-left: 8px; */                                                          
 /* 	color: @color4; */
